@@ -1,0 +1,61 @@
+#include <ND_Keyboard.hpp>
+#include <ND_Keymap.hpp>
+#include <ND_Ports.hpp>
+#include <ND_Screen.hpp>
+#include <ND_IRQ.hpp>
+
+#define MAX_STRING_SIZE 1024
+
+unsigned int tmp;
+char stringBuffer[MAX_STRING_SIZE];
+unsigned int stringPos=0;
+
+void ND::Keyboard::Setup()
+{
+	ND::Screen::SetColor(ND_SIDE_FOREGROUND, ND_COLOR_WHITE);
+	ND::Screen::PutString("\nConfigurando el Teclado...");
+
+	ND_IRQ_InstallHandler(1,&ND_Keyboard_Handler);
+
+	ND::Screen::SetColor(ND_SIDE_FOREGROUND,ND_COLOR_GREEN);
+	ND::Screen::PutString(" Echo.");
+	tmp = 1;
+}
+void ND::Keyboard::wait()
+{
+
+}
+unsigned char ND::Keyboard::GetChar()
+{
+	unsigned char scancode;
+	scancode=(unsigned char)ND::Ports::InputB(0x60);
+		
+	if(scancode & ND_KEYBOARD_KEY_RELEASE)
+	{
+		return 255;
+	}else{
+		return en_US[scancode];
+	}
+}
+char* ND::Keyboard::GetString()
+{
+	while(stringBuffer[stringPos-1]!='\n')
+	{
+		
+	}
+	stringPos=0;
+	
+	return stringBuffer;
+}
+
+extern "C"
+void ND_Keyboard_Handler(struct regs* r)
+{
+    unsigned char scancode = ND::Keyboard::GetChar();
+    if(scancode!=255)
+    {
+		ND::Screen::PutChar(scancode);
+		stringBuffer[stringPos]=scancode;
+		stringPos++;
+	}
+}
