@@ -1,0 +1,15 @@
+#!paquim
+
+#Versión
+Lorena@0.4.0
+
+#Directorio
+. /lorena
+
+#GRUB
+include GRUB
+GRUB < echo "Iniciando el sistema..."
+
+#Adicional
+#Ingrese aquí opciones adicionales
+include ED
