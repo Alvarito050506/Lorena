@@ -1,4 +1,3 @@
-ERRR
 .text
 .globl start
 start:
