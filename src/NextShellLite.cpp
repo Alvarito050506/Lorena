@@ -8,7 +8,7 @@ char DIVISION_EXCEPTION[]={};
 void Version()
 {
 	ND::Screen::SetColor(ND_SIDE_FOREGROUND,ND_COLOR_GREEN);
-	ND::Screen::PutString("\nLorena 0.3.0 - LorenaShell 0.2.0\n");
+	ND::Screen::PutString("\nLorena 0.4.0 - LorenaShell 0.2.0\n");
 }
 void Echo()
 {
@@ -49,14 +49,38 @@ void NextShell::Lite::Commands::NotFound()
 	ND::Screen::SetColor(ND_SIDE_FOREGROUND,ND_COLOR_RED);
 	ND::Screen::PutString("\nNo se pudo encontrar el comando\n");
 }
+
+void BasicExecuteString(char* bas)
+{
+	if( ND::String::Compare("echo\n",bas)==0 ) {
+		Echo();
+   	} else if( ND::String::Compare("exit\n",bas)==0 ) {
+		NextShell::Lite::main();
+  	} else {
+      		NextShell::Lite::Commands::NotFound();
+   	}
+}
+int BasicWaitForCommand()
+{
+	ND::Screen::SetColor(ND_SIDE_FOREGROUND,ND_COLOR_WHITE);
+	ND::Screen::PutString("Basic:> ");
+	char* basscript=ND::Keyboard::GetString();
+	//ND::Screen::PutString(basscript);
+	BasicExecuteString(basscript);
+	
+}
+
+
+
+
 int NextShell::Lite::ExecuteString(char* script)
 {
-	if( ND::String::Compare("version\n",script)==0 ) {
+	if( ND::String::Compare("echo\n",script)==0 ) {
+		Echo();
+   	} else if( ND::String::Compare("version\n",script)==0 ) {
 		Version();
-   	} else if( ND::String::Compare("echo\n",script)==0 ) {
-      		Echo();
-   	} else if( ND::String::Compare("clear\n",script)==0 ) {
-      		Clear();
+	} else if( ND::String::Compare("clear\n",script)==0 ) {
+		Clear();
    	} else {
       		NextShell::Lite::Commands::NotFound();
    	}
@@ -94,3 +118,5 @@ int NextShell::Lite::main()
 //	}
 }
 
+//BAS: echo, exit
+//CALC: sumar, restar

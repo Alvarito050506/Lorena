@@ -30,7 +30,7 @@ int NextKernel_Main(/*struct multiboot *mboot_ptr*/)
 	ND::Screen::SetColor(ND_SIDE_FOREGROUND,ND_COLOR_BLUE);
 	ND::Screen::PutString("Lorena\n");
 	ND::Screen::SetColor(ND_SIDE_FOREGROUND,ND_COLOR_WHITE);
-	ND::Screen::PutString("Lisenciado bajo GNU GPL v3\n");
+	ND::Screen::PutString("Licenciado bajo GNU GPL v3\n");
 	ND::Screen::SetColor(ND_SIDE_FOREGROUND,ND_COLOR_WHITE);
 	ND::Screen::PutString("Configurando el sistema...");
 	ND::GDT::Install();
@@ -42,6 +42,12 @@ int NextKernel_Main(/*struct multiboot *mboot_ptr*/)
 
 	ND::Keyboard::Setup();
 	ND::Timer::Setup();
+	ND::Screen::SetColor(ND_SIDE_FOREGROUND,ND_COLOR_WHITE);
+	ND::Screen::PutString("Configurando entradas USB...");
+	ND::Screen::SetColor(ND_SIDE_FOREGROUND,ND_COLOR_RED);
+	ND::Screen::PutString(" FALLIDO!\n");
+
+
 
 	ND::Timer::Phase(50);
 

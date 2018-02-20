@@ -18,7 +18,7 @@ void ND::Keyboard::Setup()
 	ND_IRQ_InstallHandler(1,&ND_Keyboard_Handler);
 
 	ND::Screen::SetColor(ND_SIDE_FOREGROUND,ND_COLOR_GREEN);
-	ND::Screen::PutString(" Echo.");
+	ND::Screen::PutString(" Echo.\n");
 	tmp = 1;
 }
 void ND::Keyboard::wait()
