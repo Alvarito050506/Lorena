@@ -8,7 +8,7 @@ char DIVISION_EXCEPTION[]={};
 void Version()
 {
 	ND::Screen::SetColor(ND_SIDE_FOREGROUND,ND_COLOR_GREEN);
-	ND::Screen::PutString("\nLorena 0.4.0 - LorenaShell 0.2.0\n");
+	ND::Screen::PutString("\nLorena 0.4.1 - LorenaShell 0.2.0\n");
 }
 void Echo()
 {
