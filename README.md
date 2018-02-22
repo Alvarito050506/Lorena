@@ -2,6 +2,10 @@
 
 Lorena es un sistema operativo escrito en C, C++ y Ensamblador basado en [NextDivel](https://github.com/aarroyoc/next-divel).
 
+## Prerequistos
+* git
+* CMake
+
 ## Compilar
 
 Para compilar el sistema ingrese los siguientes comandos en la terminal:
