@@ -1,37 +1,29 @@
-## Welcome to GitHub Pages
+# Lorena
 
-You can use the [editor on GitHub](https://github.com/Alvarito050506/Lorena/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Lorena es un sistema operativo escrito en C, C++ y Ensamblador basado en [NextDivel](https://github.com/aarroyoc/next-divel).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Compilar
 
-### Markdown
+Para compilar el sistema ingrese los siguientes comandos en la terminal:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```sh
+git clone http://github.com/Alvarito050506/Lorena.git
+cd ./Lorena/src
+cmake .
+make
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Crear imagen ISO
 
-### Jekyll Themes
+Para crear la imagen ISO del sistema ingrese estos comandos en la terminal:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Alvarito050506/Lorena/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```sh
+cd ./Lorena/src
+mv START.ELF ../sys/START.ELF
+cd ../..
+grub-mkrescue --product-name=Lorena --product-version=0.4.1 -o Lorena.iso Lorena
+```
 
-### Support or Contact
+## Licencia
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Lorena se distribuye bajo la licencia GPL 3.
