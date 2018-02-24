@@ -1,6 +1,5 @@
- /* Check if the compiler thinks if we are targeting the wrong operating system. */
+﻿ /* Check if the compiler thinks if we are targeting the wrong operating system. */
 #ifndef NEXT_DIVEL
-#error "You are not using a cross-compiler, you will most certainly run into trouble"
 #endif
 #include "ND_Screen.hpp"
 #include "ND_Color.hpp"

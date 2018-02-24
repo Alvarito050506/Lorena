@@ -1,6 +1,6 @@
 # Lorena
 
-Lorena es un sistema operativo escrito en C, C++ y Ensamblador basado en [NextDivel](https://github.com/aarroyoc/next-divel).
+Lorena es un sistema operativo escrito en C, C++ y Ensamblador basado en [NextDivel](https://github.com/aarroyoc/next-divel). Este es el canal "beta" en GitHub, estas versiones no son muy estables y pueden tener demasiados bugs.
 
 ## Prerequistos
 * git
