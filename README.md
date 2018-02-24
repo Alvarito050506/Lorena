@@ -1,5 +1,7 @@
 # Lorena
 
+[![Join the chat at https://gitter.im/Lorena-SO/Lobby](https://badges.gitter.im/Lorena-SO/Lobby.svg)](https://gitter.im/Lorena-SO/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Lorena es un sistema operativo escrito en C, C++ y Ensamblador basado en [NextDivel](https://github.com/aarroyoc/next-divel). Este es el canal "beta" en GitHub, estas versiones no son muy estables y pueden tener demasiados bugs.
 
 ## Prerequistos
