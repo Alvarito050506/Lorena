@@ -1,2 +1,2 @@
 language: cpp
-script: cd ./src && cmake . && make
+script: sudo apt-get install libc6 libc6-dev && cd ./src && cmake . && make
