@@ -1,0 +1,12 @@
+sudo: required
+language: cpp
+compiler:
+ - gcc
+ - clang
+script: 
+ - cd src
+ - cmake .
+ - make
+install:
+ - sudo apt-get update
+ - sudo apt-get install xorriso grub-common gcc-multilib
