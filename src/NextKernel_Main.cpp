@@ -29,7 +29,7 @@ int NextKernel_Main(/*struct multiboot *mboot_ptr*/)
 	ND::Screen::SetColor(ND_SIDE_FOREGROUND,ND_COLOR_BLUE);
 	ND::Screen::PutString("Lorena\n");
 	ND::Screen::SetColor(ND_SIDE_FOREGROUND,ND_COLOR_WHITE);
-	ND::Screen::PutString("Licenciado bajo GNU GPL v3\n");
+	ND::Screen::PutString("Licenciado bajo GNU GPL v2\n");
 	ND::Screen::SetColor(ND_SIDE_FOREGROUND,ND_COLOR_WHITE);
 	ND::Screen::PutString("Configurando el sistema...");
 	ND::GDT::Install();
