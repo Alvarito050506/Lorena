@@ -14,6 +14,7 @@ namespace NextShell{
 			void Echo();
 			void Clear();
 			void Version();
+			void Help();
 			void NotFound();
 		}
 	}
