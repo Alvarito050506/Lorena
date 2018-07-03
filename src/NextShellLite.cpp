@@ -5,18 +5,18 @@
 
 char DIVISION_EXCEPTION[]={};
 
-void Version()
+void NextShell::Lite::Keys::Version()
 {
 	ND::Screen::SetColor(ND_SIDE_FOREGROUND,ND_COLOR_GREEN);
 	ND::Screen::PutString("Lorena 0.4.1 - LorenaShell 0.2.0\n");
 }
-void Echo()
+void NextShell::Lite::Keys::Echo()
 {
 	char* str=ND::Keyboard::GetString();
 	ND::Screen::SetColor(ND_SIDE_FOREGROUND,ND_COLOR_GREEN);
 	ND::Screen::PutString(str);
 }
-void Help()
+void NextShell::Lite::Keys::Help()
 {
 	ND::Screen::SetColor(ND_SIDE_FOREGROUND,ND_COLOR_CYAN);
 	ND::Screen::PutString("\nBienvenido a Lorena!\n");
@@ -33,7 +33,7 @@ void Help()
 	ND::Screen::PutString("clear: Limpia la pantalla.\n");
 	ND::Screen::PutString("version: Muestra la version del sistema.\n");
 }
-void Clear()
+void NextShell::Lite::Keys::Clear()
 {
 	ND::Screen::Clear(ND_COLOR_BLACK);
 }
@@ -70,7 +70,7 @@ void NextShell::Lite::Commands::NotFound()
 int NextShell::Lite::ExecuteString(char* script)
 {
 	if( ND::String::Compare("echo\n",script)==0 ) {
-		NextShell::Lite:Commands::Echo();
+		NextShell::Lite::Commands::Echo();
 	} else if( ND::String::Compare("clear\n",script)==0 ) {
 		NextShell::Lite::Commands::Clear();
    	} else {
