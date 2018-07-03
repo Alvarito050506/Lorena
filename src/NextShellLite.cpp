@@ -103,10 +103,10 @@ int NextShell::Lite::main()
 	char* password=ND::Keyboard::GetString();
 	if(ND::String::Compare("12345678\n",password)==0)
 	{
-		NextShell::Lite:Commands::Clear();
+		NextShell::Lite::Commands::Clear();
 		ND::Screen::SetColor(ND_SIDE_FOREGROUND,ND_COLOR_BLUE);
 		ND::Screen::PutString("Lorena v0.4.1\n");
-		NextShell::Lite:Commands::Help();
+		NextShell::Lite::Commands::Help();
 		NextShell::Lite::WaitForCommand();
 	}
 	else
