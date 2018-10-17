@@ -32,4 +32,4 @@ grub-mkrescue --product-name=Lorena --product-version=0.4.1 -o Lorena.iso Lorena
 
 ## Licencia
 
-Lorena se distribuye bajo la licencia GPL 3.
+Lorena se distribuye bajo la licencia GPL 2.0.
