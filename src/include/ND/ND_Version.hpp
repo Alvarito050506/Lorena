@@ -2,9 +2,9 @@
 #define ND_VERSION_HPP
 
 
-#define LORENA_DISTRO "Lazer"
+#define LORENA_DISTRO "Alfa"
 
-#define LORENA_DISTRO_BETA "Venus"
+#define LORENA_DISTRO_BETA "Laser"
 
 #define LORENA_YEAR "2018"
 
